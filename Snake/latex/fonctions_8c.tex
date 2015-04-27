@@ -1,0 +1,120 @@
+\hypertarget{fonctions_8c}{\section{fonctions.\-c File Reference}
+\label{fonctions_8c}\index{fonctions.\-c@{fonctions.\-c}}
+}
+
+
+Fonctions usuelles pour gérer le snake (en dehors des fonctions graphiques)  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$sys/times.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}fonctions.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}constantes.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fonctions_8c_a32c7fb94d5268f27f3de435d7fe78552}{Coordonnees\-Snake} (\hyperlink{structcoordonnee}{coordonnee} position\mbox{[}H $\ast$L\mbox{]}, char direction, int taille)
+\begin{DoxyCompactList}\small\item\em Fonction déplaçant le snake. \end{DoxyCompactList}\item 
+void \hyperlink{fonctions_8c_af2de62444dddf7a038096fe3096bb9d7}{Grandir\-Snake} (\hyperlink{structcoordonnee}{coordonnee} position\mbox{[}H $\ast$L\mbox{]}, char direction, int taille)
+\begin{DoxyCompactList}\small\item\em Fonction conservant la queue du Snake, tout en l'agrandissant. \end{DoxyCompactList}\item 
+void \hyperlink{fonctions_8c_a5493f352a83d739e862d8542c5af0517}{Fruits} (char board\mbox{[}H\mbox{]}\mbox{[}L\mbox{]}, \hyperlink{structcoordonnee}{coordonnee} $\ast$fruit)
+\begin{DoxyCompactList}\small\item\em Fonction faisant apparaître un nouveau fruit. \end{DoxyCompactList}\item 
+int \hyperlink{fonctions_8c_aaca6853ff1225d8e55b4c5a0ca15eade}{Collision} (\hyperlink{structcoordonnee}{coordonnee} position\mbox{[}H $\ast$L\mbox{]}, int taille)
+\begin{DoxyCompactList}\small\item\em Fonction s'occupant des collisions (si jamais collision il y a, le jeu s'arrête) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fonctions usuelles pour gérer le snake (en dehors des fonctions graphiques) \begin{DoxyAuthor}{Author}
+Maxime.\-C 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 novembre 2014 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{fonctions_8c_aaca6853ff1225d8e55b4c5a0ca15eade}{\index{fonctions.\-c@{fonctions.\-c}!Collision@{Collision}}
+\index{Collision@{Collision}!fonctions.c@{fonctions.\-c}}
+\subsubsection[{Collision}]{\setlength{\rightskip}{0pt plus 5cm}int Collision (
+\begin{DoxyParamCaption}
+\item[{{\bf coordonnee}}]{position\mbox{[}\-H $\ast$\-L\mbox{]}, }
+\item[{int}]{taille}
+\end{DoxyParamCaption}
+)}}\label{fonctions_8c_aaca6853ff1225d8e55b4c5a0ca15eade}
+
+
+Fonction s'occupant des collisions (si jamais collision il y a, le jeu s'arrête) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & tableau contenant les coordonnéées du Snake \\
+\hline
+{\em taille} & du Snake \\
+\hline
+\end{DoxyParams}
+\hypertarget{fonctions_8c_a32c7fb94d5268f27f3de435d7fe78552}{\index{fonctions.\-c@{fonctions.\-c}!Coordonnees\-Snake@{Coordonnees\-Snake}}
+\index{Coordonnees\-Snake@{Coordonnees\-Snake}!fonctions.c@{fonctions.\-c}}
+\subsubsection[{Coordonnees\-Snake}]{\setlength{\rightskip}{0pt plus 5cm}void Coordonnees\-Snake (
+\begin{DoxyParamCaption}
+\item[{{\bf coordonnee}}]{position\mbox{[}\-H $\ast$\-L\mbox{]}, }
+\item[{char}]{direction, }
+\item[{int}]{taille}
+\end{DoxyParamCaption}
+)}}\label{fonctions_8c_a32c7fb94d5268f27f3de435d7fe78552}
+
+
+Fonction déplaçant le snake. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & tableau contenant les coordonnéées du Snake \\
+\hline
+{\em direction} & touche directionnelle (e = haut, s = gauche, d = bas, f = droite) \\
+\hline
+{\em taille} & du Snake \\
+\hline
+\end{DoxyParams}
+\hypertarget{fonctions_8c_a5493f352a83d739e862d8542c5af0517}{\index{fonctions.\-c@{fonctions.\-c}!Fruits@{Fruits}}
+\index{Fruits@{Fruits}!fonctions.c@{fonctions.\-c}}
+\subsubsection[{Fruits}]{\setlength{\rightskip}{0pt plus 5cm}void Fruits (
+\begin{DoxyParamCaption}
+\item[{char}]{board\mbox{[}\-H\mbox{]}\mbox{[}\-L\mbox{]}, }
+\item[{{\bf coordonnee} $\ast$}]{fruit}
+\end{DoxyParamCaption}
+)}}\label{fonctions_8c_a5493f352a83d739e862d8542c5af0517}
+
+
+Fonction faisant apparaître un nouveau fruit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & tableau de caractères de hauteur H et de largeur L \\
+\hline
+{\em fruit} & contenant les coordonnées du fruit à afficher \\
+\hline
+\end{DoxyParams}
+\hypertarget{fonctions_8c_af2de62444dddf7a038096fe3096bb9d7}{\index{fonctions.\-c@{fonctions.\-c}!Grandir\-Snake@{Grandir\-Snake}}
+\index{Grandir\-Snake@{Grandir\-Snake}!fonctions.c@{fonctions.\-c}}
+\subsubsection[{Grandir\-Snake}]{\setlength{\rightskip}{0pt plus 5cm}void Grandir\-Snake (
+\begin{DoxyParamCaption}
+\item[{{\bf coordonnee}}]{position\mbox{[}\-H $\ast$\-L\mbox{]}, }
+\item[{char}]{direction, }
+\item[{int}]{taille}
+\end{DoxyParamCaption}
+)}}\label{fonctions_8c_af2de62444dddf7a038096fe3096bb9d7}
+
+
+Fonction conservant la queue du Snake, tout en l'agrandissant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & tableau contenant les coordonnéées du Snake \\
+\hline
+{\em direction} & touche directionnelle (e = haut, s = gauche, d = bas, f = droite) \\
+\hline
+{\em taille} & du Snake \\
+\hline
+\end{DoxyParams}

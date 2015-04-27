@@ -1,0 +1,144 @@
+\hypertarget{graph_8c}{\section{graph.\-c File Reference}
+\label{graph_8c}\index{graph.\-c@{graph.\-c}}
+}
+
+
+Fonctions graphiques du snake.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$sys/times.\-h$>$}\\*
+{\ttfamily \#include $<$termios.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}graph.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}constantes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fonctions.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{graph_8c_ac047e4d3c074b9a1b78027598d535951}{read\-Key} (int taille, int speed)
+\begin{DoxyCompactList}\small\item\em lit l'entrée clavier \end{DoxyCompactList}\item 
+void \hyperlink{graph_8c_a0276638e26fda76d016cbf15cbf11ac0}{init} (char board\mbox{[}H\mbox{]}\mbox{[}L\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction d'initialisation de la matrice à des caractères vides. \end{DoxyCompactList}\item 
+void \hyperlink{graph_8c_ad9b7fb04bf1e66d644c5ea4fbfce886a}{display} (char board\mbox{[}H\mbox{]}\mbox{[}L\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction faisant une update du tableau à l'écran. \end{DoxyCompactList}\item 
+void \hyperlink{graph_8c_a9d3190c30695fa11958dae336e4fb44e}{display2} (\hyperlink{structcoordonnee}{coordonnee} position\mbox{[}H $\ast$L\mbox{]}, int taille)
+\begin{DoxyCompactList}\small\item\em Fonction utilisée uniquement lors du debug, affichant les coordonnées du snake. \end{DoxyCompactList}\item 
+void \hyperlink{graph_8c_ae59d8d17e69fb414721325ed7a842a8d}{Initialiser\-Snake} (\hyperlink{structcoordonnee}{coordonnee} position\mbox{[}H $\ast$L\mbox{]}, char b\mbox{[}H\mbox{]}\mbox{[}L\mbox{]}, int px, int py, \hyperlink{structcoordonnee}{coordonnee} $\ast$fruit, int taille)
+\begin{DoxyCompactList}\small\item\em Fonction initialisant chaque paramètre \-: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fonctions graphiques du snake. \begin{DoxyAuthor}{Author}
+Maxime.\-C 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 novembre 2014 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{graph_8c_ad9b7fb04bf1e66d644c5ea4fbfce886a}{\index{graph.\-c@{graph.\-c}!display@{display}}
+\index{display@{display}!graph.c@{graph.\-c}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void display (
+\begin{DoxyParamCaption}
+\item[{char}]{board\mbox{[}\-H\mbox{]}\mbox{[}\-L\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{graph_8c_ad9b7fb04bf1e66d644c5ea4fbfce886a}
+
+
+Fonction faisant une update du tableau à l'écran. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & tableau de caractères de hauteur H et de largeur L \\
+\hline
+\end{DoxyParams}
+\hypertarget{graph_8c_a9d3190c30695fa11958dae336e4fb44e}{\index{graph.\-c@{graph.\-c}!display2@{display2}}
+\index{display2@{display2}!graph.c@{graph.\-c}}
+\subsubsection[{display2}]{\setlength{\rightskip}{0pt plus 5cm}void display2 (
+\begin{DoxyParamCaption}
+\item[{{\bf coordonnee}}]{position\mbox{[}\-H $\ast$\-L\mbox{]}, }
+\item[{int}]{taille}
+\end{DoxyParamCaption}
+)}}\label{graph_8c_a9d3190c30695fa11958dae336e4fb44e}
+
+
+Fonction utilisée uniquement lors du debug, affichant les coordonnées du snake. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & tableau de caractères de hauteur H et de largeur L$\ast$ \\
+\hline
+{\em board} & tableau de caractères de hauteur H et de largeur L \\
+\hline
+\end{DoxyParams}
+\hypertarget{graph_8c_a0276638e26fda76d016cbf15cbf11ac0}{\index{graph.\-c@{graph.\-c}!init@{init}}
+\index{init@{init}!graph.c@{graph.\-c}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void init (
+\begin{DoxyParamCaption}
+\item[{char}]{board\mbox{[}\-H\mbox{]}\mbox{[}\-L\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{graph_8c_a0276638e26fda76d016cbf15cbf11ac0}
+
+
+Fonction d'initialisation de la matrice à des caractères vides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & tableau de caractères de hauteur H et de largeur L \\
+\hline
+\end{DoxyParams}
+\hypertarget{graph_8c_ae59d8d17e69fb414721325ed7a842a8d}{\index{graph.\-c@{graph.\-c}!Initialiser\-Snake@{Initialiser\-Snake}}
+\index{Initialiser\-Snake@{Initialiser\-Snake}!graph.c@{graph.\-c}}
+\subsubsection[{Initialiser\-Snake}]{\setlength{\rightskip}{0pt plus 5cm}void Initialiser\-Snake (
+\begin{DoxyParamCaption}
+\item[{{\bf coordonnee}}]{position\mbox{[}\-H $\ast$\-L\mbox{]}, }
+\item[{char}]{b\mbox{[}\-H\mbox{]}\mbox{[}\-L\mbox{]}, }
+\item[{int}]{px, }
+\item[{int}]{py, }
+\item[{{\bf coordonnee} $\ast$}]{fruit, }
+\item[{int}]{taille}
+\end{DoxyParamCaption}
+)}}\label{graph_8c_ae59d8d17e69fb414721325ed7a842a8d}
+
+
+Fonction initialisant chaque paramètre \-: 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & tableau contenant les coordonnées du snake \\
+\hline
+{\em b} & matrice contenant la représentation graphique du snake (affichée par display) \\
+\hline
+{\em px} & et py les coordonnées de la tête initialement \\
+\hline
+{\em fruit} & valeur contenant les coordonnées du premier fruit affiché \\
+\hline
+{\em taille} & du Snake \\
+\hline
+\end{DoxyParams}
+\hypertarget{graph_8c_ac047e4d3c074b9a1b78027598d535951}{\index{graph.\-c@{graph.\-c}!read\-Key@{read\-Key}}
+\index{read\-Key@{read\-Key}!graph.c@{graph.\-c}}
+\subsubsection[{read\-Key}]{\setlength{\rightskip}{0pt plus 5cm}int read\-Key (
+\begin{DoxyParamCaption}
+\item[{int}]{taille, }
+\item[{int}]{speed}
+\end{DoxyParamCaption}
+)}}\label{graph_8c_ac047e4d3c074b9a1b78027598d535951}
+
+
+lit l'entrée clavier 
+
+Lit un unique caractère tapé Si aucun caractère n'est tapé à temps, renvoie -\/1 Appuyer sur Entrée n'est pas nécessaire N'affiche pas le caractère à l'écran Renvoie le code A\-S\-C\-I\-I du caractère 
+\begin{DoxyParams}{Parameters}
+{\em taille} & du Snake \\
+\hline
+{\em speed} & définissant la taille à partir de laquelle le snake accélère \\
+\hline
+\end{DoxyParams}
